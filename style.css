@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 90%;
+    font-family: sans-serif;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#77c9d4+0,57bc90+100 */
+    background: #77c9d4;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #77c9d4 0%, #57bc90 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #77c9d4 0%, #57bc90 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #77c9d4 0%, #57bc90 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#77c9d4', endColorstr='#57bc90', GradientType=1);
+    /* IE6-9 */
+}
+
+.menu {
+    display: block;
+}
+
+header {
+    width: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 60px;
+    padding: 10px;
+    color: #015249;
+    font-size: 30px;
+    transition: all 1s ease;
+}
+
+header label:hover {
+    color: #57bc90;
+}
+
+.menu {
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li a {
+    display: block;
+    margin: 10px 20px;
+    border-bottom: 3px solid #015249;
+    padding: 1rem;
+}
+
+.barra {
+    width: 100%;
+    box-shadow: 1px 1px 5px #015249;
+    background-color: white;
+    position: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: #015249;
+    font-weight: 700;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    max-width: 100%;
+    max-height: 100%;
+    border: 5px solid #015249;
+    animation-name: desplazamiento;
+    transition: 1s;
+}
+
+h1,
+p {
+    color: #015249;
+}
+
+p {
+    font-weight: 700;
+}
+
+.inicio:hover {
+    background-color: #015249;
+    color: white;
+    transition: 1s;
+}
+
+.sobre-mi:hover {
+    background-color: #015249;
+    color: white;
+    transition: 1s;
+}
+
+.mis-proyectos:hover {
+    background-color: #015249;
+    color: white;
+    transition: 1s;
+}
+
+.contacto:hover {
+    background-color: #015249;
+    color: white;
+    transition: 1s;
+}
+
+section {
+    text-align: center;
+    line-height: 25px;
+    margin: 0px 20px 0px 20px;
+    border-bottom: 5px solid #015249;
+    height: 100vh;
+}
+
+.perfil img {
+    width: 400px;
+    border-radius: 100%;
+    border: 5px solid #015249;
+    display: block;
+    margin: 0 auto;
+}
+
+.parrafo-columna h1 {
+    font-size: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+.parrafo-columna p {
+    text-align: center;
+}
+
+.seccion1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    align-items: center;
+    animation-name: desplazamiento1;
+    animation-duration: 5s;
+}
+
+.seccion2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    align-items: center;
+    animation-name: desplazamiento1;
+    animation-duration: 5s;
+}
+
+.seccion3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    align-items: center;
+    animation-name: desplazamiento1;
+    animation-duration: 5s;
+}
+
+.seccion4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: none;
+    align-items: center;
+    animation-name: desplazamiento1;
+    animation-duration: 5s;
+}
+
+@media (max-width: 1030px) {
+    .seccion1,
+    .seccion2,
+    .seccion3,
+    .seccion4 {
+        display: grid;
+        grid-template-columns: none;
+    }
+    section {
+        height: auto;
+    }
+    .seccion1 {
+        padding-top: 8rem;
+    }
+}
+
+@media (max-width: 1030px) {
+    h1 {
+        line-height: 3rem;
+    }
+    .seccion2 img {
+        margin-top: 3rem;
+    }
+    .seccion4 img {
+        margin-top: 3rem;
+    }
+}
+
+span {
+    margin: 5rem 0;
+    font-size: 1.3rem;
+}
+
+i {
+    margin: 1rem;
+    font-size: 4rem
+}
+
+.fa-bars {
+    color: #015249;
+    text-align: center;
+    padding: 6px 20px;
+    display: none;
+}
+
+input {
+    display: none;
+}
+
+i:hover {
+    color: white;
+    transition: 1s;
+}
+
+@media (max-width: 655px) {
+    .fa-bars {
+        display: block;
+        margin: auto;
+    }
+    .menu {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        margin-top: -150%;
+        transition: all 1s ease;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    #btn-menu:checked~.menu {
+        margin: 0;
+    }
+}
+
+@keyframes desplazamiento1 {
+    0% {
+        position: relative;
+        left: -50%;
+    }
+    50% {
+        left: 0;
+    }
+}
+
+.boton-viajes {
+    background-color: white;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.boton-cafe {
+    background-color: white;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.boton-cafe:hover {
+    color: white;
+    background-color: #015249;
+    transition: 1s;
+}
+
+.boton-viajes:hover {
+    color: white;
+    background-color: #015249;
+    transition: 1s;
+}
+
+.boton-viajes p:hover {
+    color: white;
+}
+
+.boton-cafe p:hover {
+    color: white;
+}
+
+@media (max-width: 480px) {
+    i {
+        font-size: 3rem;
+        margin: 0.5rem;
+    }
+    span {
+        font-size: 1rem;
+    }
+    img {
+        max-width: 95%;
+    }
+    .boton-cafe {
+        padding: 1rem 0;
+    }
+    .boton-viajes {
+        padding: 1rem 0;
+    }
+    .imagen {
+        width: 95%;
+    }
+    .parrafo-columna h1 {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+}
